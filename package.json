@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "snomiao <snomiao@gmail.com>",
   "type": "module",
   "exports": {
@@ -17,6 +17,7 @@
     "dist"
   ],
   "scripts": {
+    "postinstall": "cd vscode-beancount-formatter && npm i && bun compile",
     "build": "bun build index.ts --outdir=dist && bun build:umd",
     "build:umd": "bunx rollup dist/index.js --file dist/index.umd.js --format umd --name beancountFormatter",
     "prerelease": "bun run build && echo bypass tests",
