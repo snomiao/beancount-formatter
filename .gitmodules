@@ -1,0 +1,3 @@
+[submodule "vscode-beancount-formatter"]
+	path = vscode-beancount-formatter
+	url = https://github.com/dongfg/vscode-beancount-formatter
