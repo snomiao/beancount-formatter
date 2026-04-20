@@ -33,16 +33,24 @@
     "dist"
   ],
   "scripts": {
-    "postinstall": "cd vscode-beancount-formatter && npm i && bun compile",
-    "build": "bun build index.ts --outdir=dist && bun build:umd",
+    "prepare": "git submodule update --init",
+    "build": "bun build index.ts --outdir=dist && bun run build:umd",
     "build:umd": "bunx rollup dist/index.js --file dist/index.umd.js --format umd --name beancountFormatter",
-    "prerelease": "bun run build && echo bypass tests",
-    "release": "bunx standard-version && git push --follow-tags && npm publish",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "fmt": "oxfmt '**/*.{ts,tsx,js,jsx,mjs,cjs}'",
+    "typecheck": "bunx tsgo --noEmit",
+    "prerelease": "bun run build",
+    "release": "bunx semantic-release",
     "test": "bun test"
   },
   "devDependencies": {
+    "@semantic-release/git": "latest",
+    "@semantic-release/github": "latest",
+    "@typescript/native-preview": "latest",
     "@types/bun": "^1.3.12",
-    "@types/jest": "^30.0.0"
+    "oxlint": "latest",
+    "semantic-release": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.5.3"
