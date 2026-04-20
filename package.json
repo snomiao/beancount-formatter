@@ -1,5 +1,21 @@
 {
   "name": "@snomiao/beancount-formatter",
+  "description": "Beancount file formatter library wrapping vscode-beancount-formatter",
+  "keywords": [
+    "beancount",
+    "formatter",
+    "plaintext-accounting",
+    "finance"
+  ],
+  "homepage": "https://github.com/snomiao/beancount-formatter#readme",
+  "bugs": {
+    "url": "https://github.com/snomiao/beancount-formatter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snomiao/beancount-formatter.git"
+  },
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
@@ -25,8 +41,8 @@
     "test": "bun test"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.6",
-    "@types/jest": "^29.5.12"
+    "@types/bun": "^1.3.12",
+    "@types/jest": "^30.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.5.3"
