@@ -25,6 +25,14 @@ const output = format(input);
 console.log(output);
 ```
 
+### Format a file in place
+
+```typescript
+import { formatFile } from "@snomiao/beancount-formatter";
+
+await formatFile("ledger.beancount");
+```
+
 ### Options
 
 ```typescript
