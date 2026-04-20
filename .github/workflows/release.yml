@@ -21,13 +21,13 @@ jobs:
           persist-credentials: false
           submodules: recursive
 
+      - name: Build submodule (before bun install to avoid @types/bun type pollution)
+        working-directory: vscode-beancount-formatter
+        run: npm install && npm run compile
+
       - uses: oven-sh/setup-bun@v2
 
       - run: bun install --ignore-scripts
-
-      - name: Build submodule
-        working-directory: vscode-beancount-formatter
-        run: npm install && npm run compile
 
       - run: bun run build
 
