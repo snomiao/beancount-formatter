@@ -25,6 +25,10 @@ jobs:
         working-directory: vscode-beancount-formatter
         run: npm install && npm run compile
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - uses: oven-sh/setup-bun@v2
 
       - run: bun install --ignore-scripts
