@@ -39,7 +39,7 @@
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "fmt": "oxfmt '**/*.{ts,tsx,js,jsx,mjs,cjs}'",
-    "typecheck": "bunx tsgo --noEmit",
+    "typecheck": "bunx tsrs --noEmit",
     "prerelease": "bun run build",
     "release": "bunx semantic-release",
     "test": "bun test"
@@ -47,10 +47,10 @@
   "devDependencies": {
     "@semantic-release/git": "latest",
     "@semantic-release/github": "latest",
-    "@typescript/native-preview": "latest",
     "@types/bun": "^1.3.12",
     "oxlint": "latest",
-    "semantic-release": "latest"
+    "semantic-release": "latest",
+    "tsrs": "0.25.0-ts7.1.0-beta"
   },
   "peerDependencies": {
     "typescript": "^5.5.3"

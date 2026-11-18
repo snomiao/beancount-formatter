@@ -7,7 +7,7 @@
 - `bun run build` — production build
 - `bun run lint` — lint with oxlint
 - `bun run fmt` — format with oxfmt
-- `bun run typecheck` — type check with tsgo
+- `bun run typecheck` — type check with tsrs
 
 ## Conventions
 
